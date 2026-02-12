@@ -66,7 +66,11 @@
 function checkAnswer() {
 
     var userInput = document.getElementById("answer").value;
+
+    // Clean the input
     userInput = userInput.toLowerCase().trim();
+    userInput = userInput.replace(/\./g, "");   // remove dots
+    userInput = userInput.replace(/\s+/g, " "); // remove extra spaces
 
     var correctAnswer = "devendra fadnavis";
 
@@ -89,6 +93,7 @@ function checkAnswer() {
         document.getElementById("magicImage").style.display = "none";
     }
 }
+
 
 </script>
 
